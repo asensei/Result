@@ -36,17 +36,6 @@ script:
       bundle exec pod lib lint;
     fi
 
-before_deploy:
-  - bundle exec github_changelog_generator -t ${DANGER_GITHUB_API_TOKEN} --between-tags ${TRAVIS_TAG}
-
-deploy:
-  - provider: script
-    skip_cleanup: true
-    script: rvm 2.4.2 do bundle exec ./Scripts/github_release.rb -s ${DANGER_GITHUB_API_TOKEN} -r asensei/Result -c CHANGELOG.md -t ${TRAVIS_TAG}
-    on:
-      tags: true
-      condition: $TRAVIS_OS_NAME = osx
-
 notifications:
   email:
     on_success: never
