@@ -34,7 +34,7 @@ class ResultTests: XCTestCase {
         XCTAssertFalse(result.isFailure)
         XCTAssertNoThrow(try result.assertValue())
         XCTAssertEqual(result.evaluate(
-            success: { value -> Result<String> in .success("evaluated") },
+            success: { _ -> Result<String> in .success("evaluated") },
             failure: { error in .failure(error) }
         ).value, "evaluated")
     }
@@ -50,7 +50,7 @@ class ResultTests: XCTestCase {
         XCTAssertTrue(result.isFailure)
         XCTAssertThrowsError(try result.assertValue())
         XCTAssertTrue(result.evaluate(
-            success: { value -> Result<String> in .success("evaluated") },
+            success: { _ -> Result<String> in .success("evaluated") },
             failure: { error in .failure(error) }
         ).isFailure)
     }
