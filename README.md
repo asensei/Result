@@ -8,11 +8,12 @@
 
 Swift type modelling the success/failure of arbitrary operations.
 
-`Result<Value>` values are either successful (wrapping `Value`) or not (wrapping `Error`). This is similar to Swift’s native `Optional` type: `success` is like `some`, and `failure` is like `none` except with an associated `Error` value.
+`Result<Value>` values are either successful (wrapping `Value`) or not (wrapping `Error`).
+This is similar to Swift’s native `Optional` type.
 
 ## License
 
-Copyright © 2017 [Asensei Inc.](https://www.asensei.com). All rights reserved.
+Copyright © 2017 [Asensei](https://www.asensei.com). All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
