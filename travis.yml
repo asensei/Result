@@ -17,6 +17,7 @@ script:
   - swift build -c release
   - swift test
   - if [ $TRAVIS_OS_NAME == "osx" ]; then
+      swiftlint;
       bundle exec pod lib lint;
     fi
 
