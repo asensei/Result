@@ -1,6 +1,6 @@
 # Result
 
-![Swift](https://img.shields.io/badge/swift-4.0-brightgreen.svg)
+![Swift](https://img.shields.io/badge/swift-4.2-brightgreen.svg)
 [![Build Status](https://travis-ci.org/asensei/Result.svg?branch=master)](https://travis-ci.org/asensei/Result)
 [![CocoaPods](https://img.shields.io/cocoapods/v/ResultCocoapods.svg)](https://cocoapods.org/)
 

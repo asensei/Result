@@ -11,13 +11,10 @@
 import PackageDescription
 
 let package = Package(
-
     name: "Result",
-
     products: [
       .library(name: "Result", targets: ["Result"])
     ],
-
     targets: [
         .target(name: "Result"),
         .testTarget(name: "ResultTests", dependencies: ["Result"])
