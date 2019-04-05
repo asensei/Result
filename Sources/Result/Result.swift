@@ -26,7 +26,7 @@ public enum Result<Value> {
 
 public extension Result {
 
-    public var value: Value? {
+    var value: Value? {
         switch self {
         case .success(let value):
             return value
@@ -35,7 +35,7 @@ public extension Result {
         }
     }
 
-    public var error: Error? {
+    var error: Error? {
         switch self {
         case .failure(let error):
             return error
@@ -44,7 +44,7 @@ public extension Result {
         }
     }
 
-    public func assertValue() throws -> Value {
+    func assertValue() throws -> Value {
         switch self {
         case .success(let value):
             return value
@@ -53,7 +53,7 @@ public extension Result {
         }
     }
 
-    public var isSuccess: Bool {
+    var isSuccess: Bool {
         switch self {
         case .success:
             return true
@@ -62,7 +62,7 @@ public extension Result {
         }
     }
 
-    public var isFailure: Bool {
+    var isFailure: Bool {
         switch self {
         case .failure:
             return true
@@ -71,7 +71,7 @@ public extension Result {
         }
     }
 
-    public func evaluate<Result>(success: (Value) -> Result, failure: (Error) -> Result) -> Result {
+    func evaluate<Result>(success: (Value) -> Result, failure: (Error) -> Result) -> Result {
         switch self {
         case .success(let value):
             return success(value)

@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = 'ResultCocoapods'
   spec.version      = '1.1.1'
-  spec.swift_version = '4.2'
+  spec.swift_version = '5.0'
   spec.license      = { :type => 'MIT' }
   spec.homepage     = 'https://github.com/asensei/Result'
   spec.authors      = { 'Asensei' => 'info@asensei.com' }
